@@ -1,0 +1,39 @@
+#:kivy 1.10.1
+<HeaderLabel@Label>:
+    text_size: self.size
+    font_size: self.height
+    halign: 'right'
+    size_hint: 1, 1
+
+<Stats@Widget>:
+    size_hint: (1, 2)
+    canvas:
+        Color:
+            rgba: .7, .7, .7, 1
+        Rectangle:
+            pos: self.x + 5, self.y + 5
+            size: self.width - 10, self.height - 10
+
+
+<VisLayout>:
+    orientation:'vertical'
+    padding: 20
+    # canvas:
+
+
+    HeaderLabel:
+        text: 'cpu usage'
+    Stats
+    HeaderLabel:
+        text: 'cpu temp'
+    Stats
+    HeaderLabel:
+        text: 'ram usage'
+    Stats
+    HeaderLabel:
+        text: 'gpu usage'
+    Stats
+    HeaderLabel:
+        text: 'gpu temp'
+    Stats
+
